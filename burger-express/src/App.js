@@ -6,7 +6,7 @@ import {React} from 'react';
 function App() {
   return (
     <div>
-      <h1 className='title'>Hello</h1>
+      <h1 className='title'>Burger Express</h1>
       <Link to ="/burgers"> click for burgers</Link>
       <main>
         <Routes>

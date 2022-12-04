@@ -1,21 +1,56 @@
+
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// import "bootswatch/dist/superhero/bootstrap.min.css";
+import { useState } from 'react';
+import axios from 'axios';
 import './App.css';
-import { Routes, Route , Link } from "react-router-dom"
-import Burgers from './burgers/burgers.js';
-import {React} from 'react';
+import Welcome from './Components/Welcome.js';
+import BurgerView from './Components/BurgerView.js';
+import EachBurger from './Components/EachBurger.js';
+
+
 
 function App() {
+  const [loading, setLoading] = useState(false)
+  const [burgers, setBurgers] = useState([])
+ 
+//api call
+  // const getBurgers = {
+  //   method: 'GET',
+  //   url: 'whatever the burger Url is',
+  //   headers: {
+  //     // 'X-RapidAPI-Key': '2d1bb0d53fmsh47470deb9c91173p143b5bjsn9620ab6bef18',
+  //     // 'X-RapidAPI-Host': 'planets-info-by-newbapi.p.rapidapi.com',
+  //   }
+  // };
+
+  // axios.request(getBurgers).then(function (response) {
+  //   setBurgers(response.data);
+  //   setLoading(true);
+
+  // }).catch(function (error) {
+  //   console.error(error);
+  // })
+
   return (
-    <div>
-      <h1 className='title'>Burger Express</h1>
-      <Link to ="/burgers"> click for burgers</Link>
-      <main>
+
+    <BrowserRouter>
+      <div className="App">
+        <div className="welcome">
+          <Welcome />
+        </div>
         <Routes>
-            <Route path='/burgers' element={<Burgers/>} />
+          <Route path="burgerview" element={<BurgerView loading={loading}  />} />
+          <Route path="/" />
+          <Route path="/burgerview/:burger" element={<EachBurger burgers={burgers}  />} />
         </Routes>
-       
-    </main> 
-    </div>
+
+      </div>
+    </BrowserRouter>
+
   );
+
 }
 
 export default App;

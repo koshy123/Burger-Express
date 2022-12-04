@@ -1,20 +1,21 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+//this shows our data and fetches it from the database
 const Burger = (props) => (
     <tr>
       <td>{props.burger.patty}</td>
       <td>{props.record.cheese}</td>
       <td>{props.record.topping}</td>
       <td>
-        {/* <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link> |
+        <Link className="btn btn-link" to={`/edit/${props.burger._id}`}>Edit</Link> |
         <button className="btn btn-link"
           onClick={() => {
-            props.deleteRecord(props.record._id);
+            props.deleteBurger(props.burger._id);
           }}
         >
           Delete
-        </button> */}
+        </button>
       </td>
     </tr>
    );

@@ -34,7 +34,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <div className="welcome">
-          <h1> are we working here?</h1>
+          <h1> Burger Express!</h1>
           <Welcome />
         </div>
         <Routes>

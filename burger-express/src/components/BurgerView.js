@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+// import './App.css';
+
 
 
 
@@ -11,14 +13,17 @@ function BurgerView({loading, burgers }) {
                 {loading && 
                     burgers.map((burger) => {
                          return (
+                      
                             //using id as a way to identify the burgers, can change that based on which information
                            //i want each of these to be a clickable burger icon
                            <div key={burger.id} className='burgers' id={burger.id}>
                                 <p ><Link to={'/burgerview/' + burger.id}>{burger.id}</Link></p>
                             </div>
                         )
+            
                     }
                     )}
+
             </div>
             <p className='pick2'>Or Try Something New!</p>
             

@@ -1,9 +1,12 @@
 
 import React from 'react';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom/'
 import { useState } from 'react';
 import axios from 'axios';
+
 import './App.css';
+
 import Welcome from './components/Welcome.js';
 import Burger from './components/BurgerView.js';
 import EachBurger from './components/EachBurger.js';
@@ -11,6 +14,7 @@ import EachBurger from './components/EachBurger.js';
 
 
 function App() {
+
   const [loading, setLoading] = useState(false)
   const [burgers, setBurgers] = useState([])
  
@@ -41,13 +45,15 @@ function App() {
           <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} />
           <Route path="/" />
           <Route path="/burgerview/:burger" element={<EachBurger burgers={burgers}  />} />
-        </Routes>
+        </Routes> 
 
       </div>
+
      </BrowserRouter>
 
-  );
 
+
+  );
 }
 
 export default App;

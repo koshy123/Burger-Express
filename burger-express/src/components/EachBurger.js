@@ -6,7 +6,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 function Burger({ burgers }) {
     const navigate = useNavigate();
     const { burger } = useParams()
-    let showBurger = burgers.filter(menuItem => menuItem.name === burger)
+    console.log(burger)
+    let showBurger = burgers.filter(menuItem => menuItem.patty === burger)
 
     const thisBurger = showBurger.map((sandwich) => {
        

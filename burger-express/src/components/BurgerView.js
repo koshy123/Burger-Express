@@ -12,12 +12,13 @@ function BurgerView({loading, burgers }) {
             <div className="menu">
                 {loading && 
                     burgers.map((burger) => {
+                      console.log(burger)
                          return (
                       
                             //using id as a way to identify the burgers, can change that based on which information
                            //i want each of these to be a clickable burger icon
                            <div key={burger.id} className='burgers' id={burger.id}>
-                                <p ><Link to={'/burgerview/' + burger.id}>{burger.id}</Link></p>
+                                <p ><Link to={'/burgerview/' + burger.patty}>{burger.patty}</Link></p>
                             </div>
                         )
             

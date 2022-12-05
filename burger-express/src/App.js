@@ -7,6 +7,7 @@ import './App.css';
 import Welcome from './components/Welcome.js';
 import Burger from './components/BurgerView.js';
 import EachBurger from './components/EachBurger.js';
+import Customizer from './components/Customizer.js'
 
 
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} />
           <Route path="/" />
           <Route path="/burgerview/:burger" element={<EachBurger burgers={burgers}  />} />
+          <Route path="/customizer" element={<Customizer />}/>
         </Routes>
 
       </div>

@@ -23,7 +23,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newBurger = { ...form };
  
-   await fetch("http://localhost:4000/", {
+   await fetch("http://localhost:4000/api/burgers", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",

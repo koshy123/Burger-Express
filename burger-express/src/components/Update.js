@@ -14,7 +14,7 @@ export default function Update() {
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
-     const response = await fetch(`http://localhost:4000/burger/${params.id.toString()}`);
+     const response = await fetch(`http://localhost:4000/api/burgers/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -53,7 +53,7 @@ export default function Update() {
    };
  
    // This will send a post request to update the data in the database.
-   await fetch(`http://localhost:4000/update/${params.id}`, {
+   await fetch(`http://localhost:4000/api/burgers/${params.id}`, {
      method: "POST",
      body: JSON.stringify(editedBurger),
      headers: {

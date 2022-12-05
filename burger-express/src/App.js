@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom/'
 // import "bootswatch/dist/superhero/bootstrap.min.css";
 import { useState } from 'react';
 import './App.css';
@@ -34,19 +34,20 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+    // <BrowserRouter>
       <div className="App">
         <div className="welcome">
+          <h1> are we working here?</h1>
           <Welcome />
         </div>
         <Routes>
           <Route path="burgerview" element={<Burger />} />
-          <Route path="/" element ={<App/>}/>
+          <Route path="*" element ={<App/>}/>
           <Route path="/burgerview/:burger" element={<EachBurger burgers={burgers}  />} />
         </Routes>
 
       </div>
-    </BrowserRouter>
+    // </BrowserRouter>
 
   );
 

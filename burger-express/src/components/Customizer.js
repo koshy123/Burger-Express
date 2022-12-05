@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import Create from './components/create';
-import Update from './components/update';
+import Create from '../components/Create.js';
+import Update from '../components/Update.js';
 
 
 
@@ -27,4 +27,4 @@ function Customizer () {
         </Fragment>
     )
 }
-export default SolarSystemView;
+export default Customizer;

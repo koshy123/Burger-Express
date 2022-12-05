@@ -1,0 +1,4 @@
+//This tutorial was referenced for our entire frontend:
+https://www.mongodb.com/languages/mern-stack-tutorial
+
+//Help on getting the customizer component rendered was received from Hayk

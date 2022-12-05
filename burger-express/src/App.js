@@ -3,16 +3,15 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import "bootswatch/dist/superhero/bootstrap.min.css";
 import { useState } from 'react';
-import axios from 'axios';
 import './App.css';
-import Welcome from './Components/Welcome.js';
-import BurgerView from './Components/BurgerView.js';
-import EachBurger from './Components/EachBurger.js';
+import Welcome from './components/Welcome.js';
+import Burger from './components/BurgerView.js';
+import EachBurger from './components/EachBurger.js';
 
 
 
 function App() {
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
   const [burgers, setBurgers] = useState([])
  
 //api call
@@ -41,8 +40,8 @@ function App() {
           <Welcome />
         </div>
         <Routes>
-          <Route path="burgerview" element={<BurgerView loading={loading}  />} />
-          <Route path="/" />
+          <Route path="burgerview" element={<Burger />} />
+          <Route path="/" element ={<App/>}/>
           <Route path="/burgerview/:burger" element={<EachBurger burgers={burgers}  />} />
         </Routes>
 

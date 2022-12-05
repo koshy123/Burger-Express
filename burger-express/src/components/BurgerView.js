@@ -43,7 +43,7 @@ useEffect(() => {
     return;
   }, [burgers.length]);
 
-  // deleteina burger
+  // deleteing burger
   async function deleteBurger(id) {
     await fetch(`http://localhost:4000/${id}`, {
       method: "DELETE"
@@ -53,31 +53,64 @@ useEffect(() => {
     setBurgers(newBurgers);
   }
 
+  //this is the tutorials way of putting the data into a table
+  //i would like to change this to my 
+  function burgerList() {
+    return burgers.map((burger) => {
+      return (
+        <Burger
+          burger={burger}
+          deleteBurger={() => deleteBurger(burger._id)}
+          key={burger._id}
+        />
+      );
+    });
+  }
+  
+  // This following section will display the table with the records of individuals.
+  return (
+    <div>
+      <h3>Burger menu</h3>
+      <table className="table table-striped" style={{ marginTop: 20 }}>
+        <thead>
+          <tr>
+            <th>Patty</th>
+            <th>Cheese</th>
+            <th>toppings</th>
+            <th>bun type of something</th>
+          </tr>
+        </thead>
+        <tbody>{burgerList()}</tbody>
+      </table>
+    </div>
+  );
+ }
 
 
-function BurgerView({loading }) {
-    return (
-        <Fragment>
-            <p className="pick">Order a Tried and True</p>
-            <div className="menu">
-                {loading && 
-                    burgers.map((burger) => {
-                         return (
-                            //using id as a way to identify the burgers, can change that based on which information
-                           //i want each of these to be a clickable burger icon
-                           <div key={burger.id} className='burgers' id={burger.id}>
-                                <p ><Link to={'/burgerview/' + burger.id}>{burger.id}</Link></p>
-                            </div>
-                        )
-                    }
-                    )}
-            </div>
-            <p className='pick2'>Or Try Something New!</p>
+// function BurgerView({loading }) {
+//     return (
+//         <Fragment>
+//             <p className="pick">Order a Tried and True</p>
+//             <div className="menu">
+//                 {loading && 
+//                     burgers.map((burger) => {
+//                          return (
+//                             //using id as a way to identify the burgers, can change that based on which information
+//                            //i want each of these to be a clickable burger icon
+//                            <div key={burger.id} className='burgers' id={burger.id}>
+//                                 <p ><Link to={'/burgerview/' + burger.id}>{burger.id}</Link></p>
+//                             </div>
+//                         )
+//                     }
+//                     )}
+//             </div>
+//             <p className='pick2'>Or Try Something New!</p>
             
-            //link to functionality
-            <button className="customize">Customize YOur Burger</button>
-            <div className='goHome'><Link to='/'><button>Home</button></Link></div>
-        </Fragment>
-    )
-}
-export default BurgerView;
+//             //link to functionality
+//             <button className="customize">Customize YOur Burger</button>
+//             <div className='goHome'><Link to='/'><button>Home</button></Link></div>
+//         </Fragment>
+//     )
+// }
+
+// export default BurgerView;

@@ -1,16 +1,16 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
+import Update from './Update';
 
 
 function Burger({ burgers }) {
     const navigate = useNavigate();
-    const { burger } = useParams()
-    console.log(burger)
-    let showBurger = burgers.filter(menuItem => menuItem.patty === burger)
-
+    const { id } = useParams()
+    console.log(id)
+    let showBurger = burgers.filter(menuItem => menuItem._id === id)
+    console.log(burgers)
     const thisBurger = showBurger.map((sandwich) => {
-       
+        console.log(id)
         return (
             <div className="planetFacts">
                 <div className="topRow">
@@ -20,6 +20,7 @@ function Burger({ burgers }) {
                 <div className='bottomRow' >
                     <div className='description'> {sandwich.patty}{sandwich.cheese} {sandwich.toppings}</div>
                 </div>
+                {/* <Update/> */}
             </div>
         )
     })
@@ -27,7 +28,7 @@ function Burger({ burgers }) {
     return (
         <div className='burgerPage'>
             {thisBurger}
-            <button onClick={(e) => navigate(-1)}>back to menu</button>
+            {/* <button onClick={(e) => navigate(-1)}>back to menu</button> */}
         </div>
     )
 }

@@ -20,7 +20,7 @@ function Burger({ burgers }) {
                 <div className='bottomRow' >
                     <div className='description'> {sandwich.patty}{sandwich.cheese} {sandwich.toppings}</div>
                 </div>
-                {/* <Update/> */}
+                <Update/>
             </div>
         )
     })

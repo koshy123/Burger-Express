@@ -42,14 +42,14 @@ function App() {
       <div className="App">
         <div className="welcome">
           <h1> Burger Express!</h1>
-          {/* <Welcome /> */}
-          {/* <Customizer/> */}
+          <Welcome />
+          <Customizer/>
         </div>
         <Routes>
-          {/* <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} /> */}
-          {/* <Route path="/burgerview/:id" element={<EachBurger burgers={burgers}  />} /> */}
-          {/* <Route path="/customizer" element={<Customizer/>}/> */}
-          {/* <Route path="/update/:id" element={<Update/>}/> */}
+          <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} /> 
+          <Route path="/burgerview/:id" element={<EachBurger burgers={burgers}  />} />
+          <Route path="/customizer" element={<Customizer/>}/>
+          <Route path="/update/:id" element={<Update/>}/> 
 
         </Routes>  
 

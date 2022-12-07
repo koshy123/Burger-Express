@@ -14,12 +14,14 @@ function Burger({ burgers }) {
         return (
             <div className="burgerBox">
                 <div className="burgerDescript">
-                    <div className='picture'>put a burger icon here</div>
+                    <div className='burgerTitle'>Have it as is!</div>
                     <div className="burgerId"><p className='number'>{sandwich.id}</p><p>This burger contains:</p></div>
-                    
-                    <div className='description'> {sandwich.patty}{sandwich.cheese} {sandwich.toppings}</div>
+
+                    <div className='description'> {sandwich.patty}<br/>{sandwich.cheese}<br/> {sandwich.toppings}</div>
                 </div>
-                <Update/>
+                <div className="updateBox">
+                    <Update/>
+                </div>
             </div>
         )
     })

@@ -21,7 +21,7 @@ export default function Update() {
  async function handleDelete (event) {
   event.preventDefault()
   console.log(params.id);
-  await fetch(`http://localhost:4000/api/burgers/${params.id}`, {
+  await fetch(`https://burger-express.fly.dev/api/burgers${params.id}`, {
      method: "DELETE",
      headers: {
        'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ export default function Update() {
  // This following section will display the form that takes input from the user to update the data.
  return (
    <div>
-     <h3>Update Burger</h3>
+     <p className="burgerTitle">Update Burger</p>
      <form onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="patty">Patty: </label>
@@ -96,14 +96,14 @@ export default function Update() {
        <div className="form-group">
          <input
            type="submit"
-           value="Update Record"
-           className="pointer"
+           value="Update Burger"
+           className="pointerTwo"
          />
        </div>
 
        <div className="delete">
                 
-                <button className="pointer" onClick={handleDelete}>delete</button> 
+                <button className="pointerTwo" onClick={handleDelete}>Delete</button> 
                 
                 
         </div>

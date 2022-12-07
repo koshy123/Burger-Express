@@ -23,7 +23,7 @@ function BurgerView({loading, burgers }) {
                     )}
 
             </div>
-            <p className='pick'>Or Try Something New!</p>
+            <p className='pick'>Or Try Something New With</p>
             
            <Create />
     

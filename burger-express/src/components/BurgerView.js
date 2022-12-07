@@ -28,7 +28,7 @@ function BurgerView({loading, burgers }) {
             </div>
             <p className='pick2'>Or Try Something New!</p>
             
-            //link to functionality
+           
             <button className="customize">Customize YOur Burger</button>
             {/* <div className='goHome'><Link to='/'><button>Home</button></Link></div> */}
         </Fragment>

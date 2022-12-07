@@ -1,5 +1,33 @@
 .App {
   text-align: center;
+  background-color: tan;
+}
+
+.welcome {
+  font-size: 50px;
+  color: red;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+.nameBar {
+  color: black;
+}
+.menu {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: space-around;
+  margin: 20px;
+}
+.pointer {
+  border: 2px solid black;
+  background-color: red;
+  color: white;
+  font-size: medium;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+
 }
 
 .burgers {

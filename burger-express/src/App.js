@@ -23,7 +23,7 @@ function App() {
 
   const getBurgers = {
     method: 'GET',
-    url: 'http://localhost:4000/api/burgers',
+    url: 'https://burger-express.fly.dev/api/burgers',
    
   };
 

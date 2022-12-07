@@ -70,7 +70,7 @@ export default function Update() {
  
 
    // This will send a post request to update the data in the database.
-   await fetch(`http://localhost:4000/api/burgers/${params.id}`, {
+   await fetch(`https://burger-express.fly.dev/api/burgers/${params.id}`, {
      method: "PUT",
      body: JSON.stringify(editedBurger),
      headers: {

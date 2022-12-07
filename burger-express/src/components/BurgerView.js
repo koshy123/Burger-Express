@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Create from './Create.js'
+import '../App.css';
+
 
 
 function BurgerView({loading, burgers }) {
@@ -21,7 +23,7 @@ function BurgerView({loading, burgers }) {
                     )}
 
             </div>
-            <p className='pick2'>Or Try Something New!</p>
+            <p className='pick'>Or Try Something New!</p>
             
            <Create />
     

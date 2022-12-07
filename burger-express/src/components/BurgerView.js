@@ -1,4 +1,3 @@
-
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +18,7 @@ function BurgerView({loading, burgers }) {
                             //using id as a way to identify the burgers, can change that based on which information
                            //i want each of these to be a clickable burger icon
                            <div key={burger.id} className='burgers' id={burger.id}>
-                                <p ><Link to={'/burgerview/' + burger.patty}>{burger.patty}</Link></p>
+                                <p ><Link to={'/burgerview/' + burger._id}>{burger.patty}</Link></p>
                             </div>
                         )
             
@@ -31,7 +30,7 @@ function BurgerView({loading, burgers }) {
             
             //link to functionality
             <button className="customize">Customize YOur Burger</button>
-            <div className='goHome'><Link to='/'><button>Home</button></Link></div>
+            {/* <div className='goHome'><Link to='/'><button>Home</button></Link></div> */}
         </Fragment>
     )
 }

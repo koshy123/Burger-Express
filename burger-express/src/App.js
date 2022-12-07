@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom/'
 import { useState } from 'react';
@@ -11,6 +11,7 @@ import Welcome from './components/Welcome.js';
 import Burger from './components/BurgerView.js';
 import EachBurger from './components/EachBurger.js';
 import Customizer from './components/Customizer';
+import Update from './components/Update';
 
 
 
@@ -26,6 +27,7 @@ function App() {
    
   };
 
+  useEffect(() => {
   axios.request(getBurgers).then(function (response) {
     setBurgers(response.data);
     setLoading(true);
@@ -33,7 +35,7 @@ function App() {
   }).catch(function (error) {
     console.error(error);
   })
-
+  }, [])
   return (
 
     <BrowserRouter>
@@ -44,11 +46,12 @@ function App() {
           <Customizer/>
         </div>
         <Routes>
-          <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} />
-          <Route path="/" />
-          <Route path="/burgerview/:burger" element={<EachBurger burgers={burgers}  />} />
+          <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} /> 
+          <Route path="/burgerview/:id" element={<EachBurger burgers={burgers}  />} />
           <Route path="/customizer" element={<Customizer/>}/>
-        </Routes> 
+          <Route path="/update/:id" element={<Update/>}/> 
+
+        </Routes>  
 
       </div>
 

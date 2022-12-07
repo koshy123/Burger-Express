@@ -8,7 +8,7 @@ const Welcome = () => {
         <div>
             <div className="nameBar">Welcome to Burger Express!</div>
 
-            <Link to='burgerView'>
+            <Link to='/burgerView'>
                 <button className="pointer" >Burger Menu</button>
             </Link>
         </div>

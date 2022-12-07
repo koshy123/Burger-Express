@@ -10,7 +10,6 @@ import './App.css';
 import Welcome from './components/Welcome.js';
 import Burger from './components/BurgerView.js';
 import EachBurger from './components/EachBurger.js';
-import Customizer from './components/Customizer';
 import Update from './components/Update';
 
 
@@ -47,7 +46,6 @@ function App() {
         <Routes>
           <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} /> 
           <Route path="/burgerview/:id" element={<EachBurger burgers={burgers}  />} />
-          <Route path="/customizer" element={<Customizer/>}/>
           <Route path="/update/:id" element={<Update/>}/> 
 
         </Routes>  

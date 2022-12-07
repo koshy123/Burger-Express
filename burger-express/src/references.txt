@@ -2,3 +2,4 @@
 https://www.mongodb.com/languages/mern-stack-tutorial
 
 //Help on getting the customizer component rendered was received from Hayk
+//Help on getting the delete of CRUD in the update component was received from Hayk

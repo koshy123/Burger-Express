@@ -6,11 +6,11 @@ import Update from './Update';
 function Burger({ burgers }) {
     const navigate = useNavigate();
     const { id } = useParams()
-    console.log(id)
+    // console.log(id)
     let showBurger = burgers.filter(menuItem => menuItem._id === id)
-    console.log(burgers)
+    // console.log(burgers)
     const thisBurger = showBurger.map((sandwich) => {
-        console.log(id)
+        // console.log(id)
         return (
             <div className="planetFacts">
                 <div className="topRow">
@@ -24,6 +24,7 @@ function Burger({ burgers }) {
             </div>
         )
     })
+    
 
     return (
         <div className='burgerPage'>

@@ -13,13 +13,6 @@ function Customizer () {
         <Fragment>
            {/* <Create/> */}
            
-            <div className="delete">
-                <form>
-                <input type='text' label="which burger?" ></input>
-                <button>delete</button> 
-                </form>
-                
-            </div>
            {/* <Update/> */}
             <p className='pick2'>Or Try Something New!</p>
             //link to functionality

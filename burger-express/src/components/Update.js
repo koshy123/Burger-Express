@@ -43,6 +43,20 @@ export default function Update() {
      return { ...prev, ...value };
    });
  }
+
+ async function handleDelete (event) {
+  event.preventDefault()
+  console.log(params.id);
+  await fetch(`http://localhost:4000/api/burgers/${params.id}`, {
+     method: "DELETE",
+     headers: {
+       'Content-Type': 'application/json'
+     },
+   });
+ 
+   navigate("/");
+  
+}
  
  async function onSubmit(e) {
    e.preventDefault();
@@ -53,6 +67,7 @@ export default function Update() {
    };
  console.log(editedBurger)
  console.log(params.id)
+ 
 
    // This will send a post request to update the data in the database.
    await fetch(`http://localhost:4000/api/burgers/${params.id}`, {
@@ -111,6 +126,13 @@ export default function Update() {
            className="btn btn-primary"
          />
        </div>
+
+       <div className="delete">
+                
+                <button onClick={handleDelete}>delete</button> 
+                
+                
+        </div>
      </form>
    </div>
  );

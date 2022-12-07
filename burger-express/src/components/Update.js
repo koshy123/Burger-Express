@@ -11,33 +11,7 @@ export default function Update() {
  const params = useParams();
  const navigate = useNavigate();
  console.log(params)
-//  useEffect(() => {
-//    async function fetchData() {
-//      const id = params._id.toString();
-//      const response = await fetch(`http://localhost:4000/api/burgers/${params.id.toString()}`);
- 
-//      if (!response.ok) {
-//        const message = `An error has occurred: ${response.statusText}`;
-//        window.alert(message);
-//        return;
-//      }
- 
-//      const record = await response.json();
-//      if (!record) {
-//        window.alert(`Record with id ${id} not found`);
-//        navigate("/");
-//        return;
-//      }
- 
-//      setForm(record);
-//    }
- 
-//    fetchData();
- 
-//    return;
-//  }, [params.id, navigate]);
- 
- // These methods will update the state properties.
+
  function updateForm(value) {
    return setForm((prev) => {
      return { ...prev, ...value };
@@ -47,7 +21,7 @@ export default function Update() {
  async function handleDelete (event) {
   event.preventDefault()
   console.log(params.id);
-  await fetch(`http://localhost:4000/api/burgers/${params.id}`, {
+  await fetch(`https://burger-express.fly.dev/api/burgers${params.id}`, {
      method: "DELETE",
      headers: {
        'Content-Type': 'application/json'
@@ -84,7 +58,7 @@ export default function Update() {
  // This following section will display the form that takes input from the user to update the data.
  return (
    <div>
-     <h3>Update Burger</h3>
+     <p className="burgerTitle">Update Burger</p>
      <form onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="patty">Patty: </label>
@@ -122,14 +96,14 @@ export default function Update() {
        <div className="form-group">
          <input
            type="submit"
-           value="Update Record"
-           className="btn btn-primary"
+           value="Update Burger"
+           className="pointerTwo"
          />
        </div>
 
        <div className="delete">
                 
-                <button onClick={handleDelete}>delete</button> 
+                <button className="pointerTwo" onClick={handleDelete}>Delete</button> 
                 
                 
         </div>

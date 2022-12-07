@@ -61,3 +61,16 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: large;
 }
+.form-control {
+  margin: 5px;
+  width: 100px;
+  padding: 5px;
+  
+  
+}
+.titleLine {
+  font-size: 40px;
+}
+.form-group {
+  font-size: 25px;
+}

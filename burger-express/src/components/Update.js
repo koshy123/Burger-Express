@@ -11,33 +11,7 @@ export default function Update() {
  const params = useParams();
  const navigate = useNavigate();
  console.log(params)
-//  useEffect(() => {
-//    async function fetchData() {
-//      const id = params._id.toString();
-//      const response = await fetch(`http://localhost:4000/api/burgers/${params.id.toString()}`);
- 
-//      if (!response.ok) {
-//        const message = `An error has occurred: ${response.statusText}`;
-//        window.alert(message);
-//        return;
-//      }
- 
-//      const record = await response.json();
-//      if (!record) {
-//        window.alert(`Record with id ${id} not found`);
-//        navigate("/");
-//        return;
-//      }
- 
-//      setForm(record);
-//    }
- 
-//    fetchData();
- 
-//    return;
-//  }, [params.id, navigate]);
- 
- // These methods will update the state properties.
+
  function updateForm(value) {
    return setForm((prev) => {
      return { ...prev, ...value };
@@ -123,13 +97,13 @@ export default function Update() {
          <input
            type="submit"
            value="Update Record"
-           className="btn btn-primary"
+           className="pointer"
          />
        </div>
 
        <div className="delete">
                 
-                <button onClick={handleDelete}>delete</button> 
+                <button className="pointer" onClick={handleDelete}>delete</button> 
                 
                 
         </div>

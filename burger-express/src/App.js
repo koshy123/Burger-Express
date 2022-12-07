@@ -43,7 +43,6 @@ function App() {
         <div className="welcome">
           <h1> Burger Express!</h1>
           <Welcome />
-          <Customizer/>
         </div>
         <Routes>
           <Route path="/burgerview" element={<Burger burgers={burgers} setBurgers={setBurgers} loading={loading}/>} /> 

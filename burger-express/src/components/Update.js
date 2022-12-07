@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 
-
-
 export default function Update() {
  const [form, setForm] = useState({
    patty: "",
